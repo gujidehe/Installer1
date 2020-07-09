@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['install.py'],
-             pathex=['D:\\PycharmProjects\\untitled'],
+             pathex=['D:\\PycharmProjects\\Installer1'],
              binaries=[],
              datas=[],
              hiddenimports=[],

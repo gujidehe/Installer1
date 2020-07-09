@@ -1,3 +1,13 @@
-L1 = ['Hello', 'World', 18, 'Apple', None]
-L11 = [s.lower() for s in L1 if isinstance(s, str) == True]
-print(L11)
+from datetime import datetime
+import os
+
+pwd = os.path.abspath('.')
+
+print('      Size     Last Modified  Name')
+print('------------------------------------------------------------')
+
+for f in os.listdir(pwd):
+    fsize = os.path.getsize(f)
+    mtime = datetime.fromtimestamp(os.path.getmtime(f)).strftime('%Y-%m-%d %H:%M')
+    flag = '/' if os.path.isdir(f) else ''
+    print('%10d  %s  %s%s' % (fsize, mtime, f, flag))

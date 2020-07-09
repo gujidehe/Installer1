@@ -69,7 +69,7 @@ def install_apk(chose_file_num):
 
 # 检查本地文件是否存在
 def check_local_file():
-    file_list = glob.glob('C:\\Users\\thinkpad\\Downloads\\*.apk')
+    file_list = glob.glob('C:\\Users\\admin\\Downloads\\*.apk')
     for file_name in file_list:
         timestamp = os.path.getctime(file_name)
         d[timestamp] = file_name
